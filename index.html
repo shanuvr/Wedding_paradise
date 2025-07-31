@@ -34,14 +34,17 @@
     </style>
   </head>
   <body
-    class="bg-[#181A20] text-white overflow-x-hidden transition-all duration-300"
+    class="bg-[#f5f5f5]] text-white overflow-x-hidden transition-all duration-300"
     x-data="{ navOpen: false }"
   >
     <!-- Fixed Transparent Navbar -->
     <nav
-      class="fixed top-0 left-0 w-full z-50   transition-all"
-      role="navigation"
-      aria-label="Primary Navigation"
+       x-data="{ scrolled: false }"
+  x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 390 })"
+  :class="scrolled ? 'bg-black/90 backdrop-blur shadow text-white' : 'bg-transparent text-white'"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+  role="navigation"
+  aria-label="Primary Navigation"
     >
       <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
         <!-- Hamburger Menu button - visible only on mobile -->
@@ -144,7 +147,7 @@
           style="display: none;"
         >
           <nav
-            class="bg-[#1f2128] w-4/5 max-w-xs p-6 flex flex-col shadow-xl text-white"
+            class="bg-[#1f2128] w-4/5 max-w-xs min-h-screen p-6 flex flex-col shadow-xl text-white"
           >
             <button
               @click="navOpen = false"
@@ -198,7 +201,7 @@
 
     <!-- Hero Section -->
     <section
-      class="relative min-h-[80vh] w-full flex items-center justify-center overflow-hidden pt-20"
+      class="relative h-[90vh] w-full flex items-center justify-center overflow-hidden pt-20"
     >
       <!-- Desktop Video -->
       <video
@@ -247,11 +250,12 @@
         class="absolute inset-0 flex items-center justify-center z-20"
         style="font-family: 'Montserrat', 'Inter', sans-serif;"
       >
-        <h1
-          class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide text-center text-white drop-shadow-lg"
+        <h3
+          class="text-xl md:text-xl lg:text-2xl font-bold tracking-wide text-center text-white drop-shadow-lg"
         >
-          YOUR 4 WORDS HERE
-        </h1>
+          Two Souls, One Story
+          Captured Through Our Lens
+        </h3>
       </div>
 
       <!-- Center Bottom Logo -->
@@ -266,12 +270,17 @@
           loading="lazy"
         />
       </div>
+      <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 z-30 animate-bounce">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+  </svg>
+</div>
     </section>
 
     <!-- Gallery Section -->
     <section
       id="gallery"
-      class="py-24 bg-[#181A20] z-10"
+      class="py-24 bg-[white] z-10"
       aria-label="Photo Gallery"
     >
       <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-8">
@@ -315,7 +324,7 @@
     </section>
 
     <!-- Intimate Wedding Section -->
-<section class="relative bg-[#181A20] py-20 text-white px-6">
+<section class="relative bg-[#f5f5f5]] py-20 text-black px-6">
   <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
     <!-- Text Content -->
     <div data-aos="fade-right" class="space-y-6">
@@ -336,7 +345,7 @@
     <!-- Images Showcase -->
     <div class="grid grid-cols-2 gap-6">
       <div class="col-span-2 relative rounded-lg overflow-hidden" data-aos="zoom-in-up">
-        <img src="IMAGE1.jpg" alt="Yami & Guru" class="object-cover w-full h-80 rounded-lg" />
+        <img src="assets/Set1/6078142472560689854.jpg" alt="Yami & Guru" class="object-cover w-full h-80 rounded-lg" />
         <div class="absolute bottom-2 left-4 bg-black/60 px-3 py-1 rounded text-sm">
           <div class="font-semibold">YAMI & GURU</div>
           <div class="text-gray-300 text-xs italic">Destination : Chennai</div>
@@ -344,14 +353,14 @@
       </div>
       <div class="space-y-6">
         <div class="relative rounded-lg overflow-hidden" data-aos="zoom-in-up" data-aos-delay="150">
-          <img src="IMAGE2.jpg" alt="Kalayani & Midhun" class="object-cover w-full h-44 rounded-lg" />
+          <img src="assets/Set1/6078142472560689860.jpg" alt="Kalayani & Midhun" class="object-cover w-full h-44 rounded-lg" />
           <div class="absolute bottom-2 left-4 bg-black/60 px-3 py-1 rounded text-sm">
             <div class="font-semibold">KALAYANI & MIDHUN</div>
             <div class="text-gray-300 text-xs italic">Destination : Kochi</div>
           </div>
         </div>
         <div class="relative rounded-lg overflow-hidden" data-aos="zoom-in-up" data-aos-delay="300">
-          <img src="IMAGE3.jpg" alt="Yuna & Kiran" class="object-cover w-full h-44 rounded-lg" />
+          <img src="assets/Set1/6078142472560689856.jpg" alt="Yuna & Kiran" class="object-cover w-full h-44 rounded-lg" />
           <div class="absolute bottom-2 left-4 bg-black/60 px-3 py-1 rounded text-sm">
             <div class="font-semibold">YUNA & KIRAN</div>
             <div class="text-gray-300 text-xs italic">Destination : Chennai</div>
