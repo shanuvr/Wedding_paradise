@@ -1,0 +1,44 @@
+ <section
+      id="gallery"
+      class="py-24 bg-[white] z-10"
+      aria-label="Photo Gallery"
+    >
+      <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="100"
+          class="rounded-xl overflow-hidden shadow-lg"
+        >
+          <img
+            src="assets/Set1/6078142472560689854.jpg"
+            alt="Gallery Photo 1"
+            class="object-cover w-full h-60"
+            loading="lazy"
+          />
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          class="rounded-xl overflow-hidden shadow-lg"
+        >
+          <img
+            src="assets/Set1/6078142472560689856.jpg"
+            alt="Gallery Photo 2"
+            class="object-cover w-full h-60"
+            loading="lazy"
+          />
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="300"
+          class="rounded-xl overflow-hidden shadow-lg"
+        >
+          <img
+            src="assets/Set1/6078142472560689858.jpg"
+            alt="Gallery Photo 3"
+            class="object-cover w-full h-60"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
