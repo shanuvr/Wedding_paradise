@@ -44,7 +44,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-25%);
   }
 }
 
@@ -347,8 +347,7 @@
   
    
 
-    <!-- Intimate Wedding Section -->
-<!-- Intimate Wedding Section with AOS animations -->
+
 <section class="relative bg-[#f5f5f5] py-20 text-black px-6">
   <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
     
@@ -356,7 +355,7 @@
     <div class="space-y-6">
       <h2 
   class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide text-black text-center"
-  data-aos="fade-left"
+  
 >
   EVERLASTING TALES <br>
   BY <span class="">THE WEDDING PARADISE</span>
@@ -364,8 +363,8 @@
       
       <p 
   class="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed md:leading-loose max-w-2xl mx-auto md:mx-0"
-  data-aos="fade-right"
-  data-aos-delay="100"
+  data-aos="fade-right" data-aos-delay="400"
+
 >
   Every couple’s journey is a beautiful mosaic of emotions, quiet promises, and unforgettable moments. At 
   <span class="text-pink-600 font-semibold">The Wedding Paradise</span>, we specialize in capturing these pure, unscripted instances that truly define a wedding. Whether it’s a soft smile exchanged under twilight skies or the joyful tears shared with loved ones, we frame each second with heart. Our storytelling approach blends elegance and authenticity, turning your most cherished day into a visual memory that lasts a lifetime — beyond trends, beyond time.
@@ -374,9 +373,10 @@
       
       <blockquote 
         class="text-gray-400 italic text-sm"
+      
       >
-        “I like to photograph anyone before they know what their best angles are.”<br />
-        <span class="text-xs">– Ellen Von Unwerth</span>
+        “The most beautiful moments are never posed — they’re felt, and we simply preserve them.”<br />
+        <span class="text-xs">— The Wedding Paradise</span>
       </blockquote>
     </div>
 
@@ -392,8 +392,8 @@
           />
         </div>
         <div class="mt-4 text-center">
-          <h3 class="text-lg font-semibold text-black">YUNA & KIRAN</h3>
-          <p class="text-sm italic text-gray-500">Destination : Chennai</p>
+          <h3 class="text-lg font-semibold text-black">Anjali & Arun</h3>
+          <p class="text-sm italic text-gray-500">Destination : bangalore</p>
         </div>
       </div>
 
@@ -409,13 +409,13 @@
             />
           </div>
           <div class="mt-3 text-center">
-            <h3 class="text-sm font-semibold text-black">KALAYANI & MIDHUN</h3>
+            <h3 class="text-sm font-semibold text-black">Dhanya & Midhun</h3>
             <p class="text-xs italic text-gray-500">Destination : Kochi</p>
           </div>
         </div>
 
         <!-- Small Card 2 -->
-        <div class="bg-white p-4 rounded-xl shadow-md" data-aos="fade-up">
+        <div class="bg-white p-4 rounded-xl shadow-md" >
           <div class="overflow-hidden rounded-lg">
             <img
               src="assets/Set1/bw-2.jpg"
@@ -424,8 +424,8 @@
             />
           </div>
           <div class="mt-3 text-center">
-            <h3 class="text-sm font-semibold text-black">YUNA & KIRAN</h3>
-            <p class="text-xs italic text-gray-500">Destination : Chennai</p>
+            <h3 class="text-sm font-semibold text-black">Devika & Sreejith</h3>
+            <p class="text-xs italic text-gray-500">Destination : Thrissur</p>
           </div>
         </div>
       </div>
@@ -969,15 +969,7 @@
 
     <!-- Initialize AOS -->
     <script>
-      function scrollStories(direction) {
-    const container = document.getElementById("story-scroll");
-    const scrollAmount = 300;
-    if (direction === "left") {
-      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    } else {
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-  }
+      
       AOS.init({ once: true, duration: 800 });
     </script>
   </body>
