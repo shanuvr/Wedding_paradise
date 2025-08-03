@@ -374,8 +374,6 @@
       
       <blockquote 
         class="text-gray-400 italic text-sm"
-        data-aos="fade-right"
-        data-aos-delay="200"
       >
         “I like to photograph anyone before they know what their best angles are.”<br />
         <span class="text-xs">– Ellen Von Unwerth</span>
@@ -507,7 +505,7 @@
 
       <!-- Image -->
       <div class="z-10" data-aos="fade-right">
-        <img src="assets/Set1/whychooeus2.jpg" alt="Cinematic Edits"
+        <img src="assets/scroll/6086811941357077604.jpg" alt="Cinematic Edits"
              class="w-full rounded-xl shadow-md object-cover max-h-[320px] aspect-video mx-auto">
       </div>
 
@@ -621,21 +619,21 @@
         <div class="flex shrink-0">
           <!-- Card 1 -->
           <div class="story-card">
-            <img src="assets/scroll/6086811941357077602.jpg" class="story-img" />
+            <img src="assets/scroll/6086811941357077602.jpg" class="story-img" loading="lazy" />
             <h3 class="story-title">Anjali & Raj</h3>
             <p class="story-quote">“They didn’t just capture our wedding. They captured our hearts.”</p>
             <a href="#" class="story-link">See Full Story →</a>
           </div>
           <!-- Card 2 -->
           <div class="story-card">
-            <img src="assets/scroll/6086811941357077603.jpg" class="story-img" />
+            <img src="assets/scroll/6086811941357077603.jpg" class="story-img"loading="lazy" />
             <h3 class="story-title">Meera & Jai</h3>
             <p class="story-quote">“Each picture felt like a scene from a movie.”</p>
             <a href="#" class="story-link">See Full Story →</a>
           </div>
           <!-- Card 3 -->
           <div class="story-card">
-            <img src="assets/scroll/6086811941357077604.jpg" class="story-img" />
+            <img src="assets/scroll/6086811941357077604.jpg" class="story-img" loading="lazy" />
             <h3 class="story-title">Tara & Vihaan</h3>
             <p class="story-quote">“We felt so seen, heard, and understood.”</p>
             <a href="#" class="story-link">See Full Story →</a>
@@ -645,19 +643,19 @@
         <!-- Duplicate of Full Set -->
         <div class="flex shrink-0">
           <div class="story-card">
-            <img src="assets/scroll/6086811941357077605.jpg" class="story-img" />
+            <img src="assets/scroll/6086811941357077605.jpg" class="story-img"loading="lazy" />
             <h3 class="story-title">Anjali & Raj</h3>
             <p class="story-quote">“They didn’t just capture our wedding. They captured our hearts.”</p>
             <a href="#" class="story-link">See Full Story →</a>
           </div>
           <div class="story-card">
-            <img src="assets/scroll/6086811941357077606.jpg" class="story-img" />
+            <img src="assets/scroll/6086811941357077606.jpg" class="story-img" loading="lazy" />
             <h3 class="story-title">Meera & Jai</h3>
             <p class="story-quote">“Each picture felt like a scene from a movie.”</p>
             <a href="#" class="story-link">See Full Story →</a>
           </div>
           <div class="story-card">
-            <img src="assets/scroll/6086811941357077607.jpg" class="story-img" />
+            <img src="assets/scroll/6086811941357077607.jpg" class="story-img" loading="lazy" />
             <h3 class="story-title">Tara & Vihaan</h3>
             <p class="story-quote">“We felt so seen, heard, and understood.”</p>
             <a href="#" class="story-link">See Full Story →</a>
@@ -666,19 +664,19 @@
  <!-- Duplicate of Full Set -->
         <div class="flex shrink-0">
           <div class="story-card">
-            <img src="assets/scroll/6086811941357077608.jpg" class="story-img" />
+            <img src="assets/scroll/6086811941357077608.jpg" class="story-img" loading="lazy" />
             <h3 class="story-title">Anjali & Raj</h3>
             <p class="story-quote">“They didn’t just capture our wedding. They captured our hearts.”</p>
             <a href="#" class="story-link">See Full Story →</a>
           </div>
           <div class="story-card">
-            <img src="assets/scroll/6086811941357077609.jpg" class="story-img" />
+            <img src="assets/scroll/6086811941357077609.jpg" class="story-img" loading="lazy" />
             <h3 class="story-title">Meera & Jai</h3>
             <p class="story-quote">“Each picture felt like a scene from a movie.”</p>
             <a href="#" class="story-link">See Full Story →</a>
           </div>
           <div class="story-card">
-            <img src="assets/scroll/6086811941357077610.jpg" class="story-img" />
+            <img src="assets/scroll/6086811941357077610.jpg" class="story-img" loading="lazy" />
             <h3 class="story-title">Tara & Vihaan</h3>
             <p class="story-quote">“We felt so seen, heard, and understood.”</p>
             <a href="#" class="story-link">See Full Story →</a>
@@ -691,7 +689,8 @@
       </div>
     </div>
   </div>
-</section
+</section>
+
 
 
 
@@ -970,6 +969,15 @@
 
     <!-- Initialize AOS -->
     <script>
+      function scrollStories(direction) {
+    const container = document.getElementById("story-scroll");
+    const scrollAmount = 300;
+    if (direction === "left") {
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  }
       AOS.init({ once: true, duration: 800 });
     </script>
   </body>
