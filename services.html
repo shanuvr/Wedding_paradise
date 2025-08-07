@@ -410,30 +410,61 @@
    
 
     <!-- Minimal Footer -->
-    <footer
-      class="py-6 bg-black/70 flex flex-col lg:flex-row justify-between items-center gap-2 px-6 text-gray-400 text-sm"
-      role="contentinfo"
-    >
-      <div>&copy; 2025 The Wedding Paradise. All Rights Reserved.</div>
-      <div class="flex gap-4 mt-3 lg:mt-0">
+     <footer class="bg-gray-950 text-gray-400 text-sm px-6 py-10 mt-12">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+    <!-- Column 1: Brand Info -->
+    <div>
+      <h3 class="text-white text-lg font-semibold mb-2">The Wedding Paradise</h3>
+      <p class="text-xs leading-relaxed">
+        Creating unforgettable memories with timeless celebrations. We plan, design, and deliver dream weddings.
+      </p>
+      <p class="text-xs mt-4">&copy; 2025 The Wedding Paradise. All rights reserved.</p>
+    </div>
+
+    <!-- Column 2: Navigation Links -->
+    <div class="text-sm">
+      <h4 class="text-white font-medium mb-3">Quick Links</h4>
+      <ul class="space-y-2">
+        <li><a href="/" class="hover:text-white transition">Home</a></li>
+        <li><a href="/about.html" class="hover:text-white transition">About Us</a></li>
+        <li><a href="/services.html" class="hover:text-white transition">Our Services</a></li>
+        <li><a href="/Gallery.html" class="hover:text-white transition">Gallery</a></li>
+        <li><a href="/testimonials" class="hover:text-white transition">Testimonials</a></li>
+        <li><a href="/contact.html" class="hover:text-white transition">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Social & Contact -->
+    <div>
+      <h4 class="text-white font-medium mb-3">Connect With Us</h4>
+      <div class="flex gap-4 mb-4">
         <a
           href="https://instagram.com/"
           target="_blank"
           rel="noopener"
           aria-label="Instagram"
-          class="hover:text-pink-400 transition"
-          ><i class="ph ph-instagram-logo text-xl"></i
-        ></a>
+          class="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-pink-500/80 text-white rounded-full transition-all"
+        >
+          <i class="ph ph-instagram-logo text-lg"></i>
+        </a>
         <a
           href="https://facebook.com/"
           target="_blank"
           rel="noopener"
           aria-label="Facebook"
-          class="hover:text-blue-400 transition"
-          ><i class="ph ph-facebook-logo text-xl"></i
-        ></a>
+          class="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-blue-500/80 text-white rounded-full transition-all"
+        >
+          <i class="ph ph-facebook-logo text-lg"></i>
+        </a>
       </div>
-    </footer>
+      <a href="mailto:hello@weddingparadise.com" class="block text-xs hover:text-white transition">
+        hello@weddingparadise.com
+      </a>
+    </div>
+
+  </div>
+</footer>
 
     <!-- Initialize AOS -->
     <script>

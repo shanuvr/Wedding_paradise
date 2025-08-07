@@ -932,7 +932,7 @@
 <section class="bg-white text-black">
   <!-- Background Header Section -->
   <div
-    class="relative h-64 md:h-80 bg-center bg-cover"
+    class="relative h-80 md:h-[24rem] bg-center bg-cover"
     style="background-image: url('assets/Set1/6078142472560689861.jpg')"
   >
     <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center px-4 text-center text-white">
@@ -944,89 +944,111 @@
   </div>
 
   <!-- Contact Form -->
-  <div class="max-w-3xl mx-auto -mt-16 z-10 relative bg-white shadow-lg rounded-lg p-6 md:p-8">
-   <form action="https://formspree.io/f/xovlkrjq" method="POST" class="space-y-4" id="enquiryForm">
-    <!-- Name -->
-    <div>
-      <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-      <input type="text" name="name" id="name" required
-        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200 outline-none" />
-    </div>
+  <div class="w-[90%] sm:w-[80%] md:w-[60%] lg:w-[45%] xl:w-[35%] mx-auto -mt-20 z-10 relative bg-white shadow-xl rounded-xl p-5 md:p-6 border border-gray-100">
+    <form action="https://formspree.io/f/xovlkrjq" method="POST" class="space-y-4" id="enquiryForm">
+      
+      <!-- Heading -->
+      <h3 class="text-lg md:text-xl font-semibold text-gray-800 text-center mb-1">Get in Touch</h3>
+      <p class="text-xs text-gray-500 text-center mb-4">We’ll get back to you within 24 hours.</p>
 
-    <!-- Phone -->
-    <div>
-      <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-      <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" maxlength="10" required
-        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200 outline-none"
-        placeholder="Enter 10-digit phone number" />
-    </div>
-
-    <!-- Message -->
-    <div>
-      <label for="message" class="block text-sm font-medium text-gray-700">Your Enquiry</label>
-      <textarea name="message" id="message" required rows="4"
-        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200 outline-none"
-        placeholder="Type your message..."></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button type="submit"
-      class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition">Submit</button>
-
-    <!-- Success message -->
-    <p id="successMessage" class="text-green-600 text-center hidden mt-2">Message sent successfully!</p>
-  </form>
-  </div>
-
-
-<!-- Contact Cards -->
-<div class="mt-10 px-4 max-w-5xl mx-auto">
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-
-    <!-- Call Us -->
-    <div class="bg-white border rounded-lg shadow p-4 text-center">
-      <div class="text-indigo-500 text-xl mb-1">
-        <i class="ph ph-phone-call"></i>
+      <!-- Name -->
+      <div class="flex flex-col gap-1">
+        <label for="name" class="text-xs text-gray-600 font-medium">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          class="px-3 py-1.5 rounded-lg text-sm border border-gray-300 focus:ring-2 focus:ring-indigo-300 focus:outline-none transition-all duration-200"
+        />
       </div>
-      <h4 class="text-base font-semibold mb-0.5">Call Us</h4>
-      <p class="text-xs text-gray-500 mb-0.5 leading-tight">Speak to a team member directly.</p>
-      <p class="text-blue-600 text-xs font-medium leading-tight">+1 (646) 786-5060</p>
-    </div>
 
-    <!-- WhatsApp Us -->
-    <div class="bg-white border rounded-lg shadow p-4 text-center">
-      <div class="text-green-600 text-xl mb-1">
-        <i class="ph ph-whatsapp-logo"></i>
+      <!-- Phone -->
+      <div class="flex flex-col gap-1">
+        <label for="phone" class="text-xs text-gray-600 font-medium">Phone Number</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          pattern="[0-9]{10}"
+          maxlength="10"
+          required
+          placeholder="10-digit mobile"
+          class="px-3 py-1.5 rounded-lg text-sm border border-gray-300 focus:ring-2 focus:ring-indigo-300 focus:outline-none transition-all duration-200"
+        />
       </div>
-      <h4 class="text-base font-semibold mb-0.5">WhatsApp Us</h4>
-      <p class="text-xs text-gray-500 mb-0.5 leading-tight">Instant support and inquiries.</p>
-      <a
-        href="https://wa.me/919876543210"
-        target="_blank"
-        class="inline-flex items-center justify-center gap-1 text-green-700 font-medium text-xs hover:underline"
+
+      <!-- Message -->
+      <div class="flex flex-col gap-1">
+        <label for="message" class="text-xs text-gray-600 font-medium">Your Message</label>
+        <textarea
+          name="message"
+          id="message"
+          required
+          rows="3"
+          placeholder="Type something..."
+          class="px-3 py-1.5 rounded-lg text-sm border border-gray-300 focus:ring-2 focus:ring-indigo-300 focus:outline-none transition-all duration-200 resize-none"
+        ></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="w-full py-2 text-sm font-medium bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-all duration-200 shadow-sm"
       >
-        <i class="ph ph-paper-plane-right text-sm"></i>
-        Start Chat
-      </a>
-    </div>
+        Submit
+      </button>
 
-    <!-- Email Us -->
-    <div class="col-span-2 md:col-span-1 bg-white border rounded-lg shadow p-4 text-center">
-      <div class="text-blue-500 text-xl mb-1">
-        <i class="ph ph-envelope-simple"></i>
-      </div>
-      <h4 class="text-base font-semibold mb-0.5">Email Us</h4>
-      <p class="text-xs text-gray-500 mb-0.5 leading-tight">For general queries, including marketing.</p>
-      <p class="text-blue-600 text-xs font-medium leading-tight">hello@flowbite.com</p>
-    </div>
-
+      <!-- Success Message -->
+      <p id="successMessage" class="text-green-600 text-center hidden text-sm mt-1">Message sent successfully!</p>
+    </form>
   </div>
-</div>
 
+  <!-- Contact Cards -->
+  <div class="mt-10 px-4 max-w-5xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
 
+      <!-- Call Us -->
+      <div class="bg-white border rounded-lg shadow p-4 text-center">
+        <div class="text-indigo-500 text-xl mb-1">
+          <i class="ph ph-phone-call"></i>
+        </div>
+        <h4 class="text-base font-semibold mb-0.5">Call Us</h4>
+        <p class="text-xs text-gray-500 mb-0.5 leading-tight">Speak to a team member directly.</p>
+        <p class="text-blue-600 text-xs font-medium leading-tight">+1 (646) 786-5060</p>
+      </div>
 
+      <!-- WhatsApp Us -->
+      <div class="bg-white border rounded-lg shadow p-4 text-center">
+        <div class="text-green-600 text-xl mb-1">
+          <i class="ph ph-whatsapp-logo"></i>
+        </div>
+        <h4 class="text-base font-semibold mb-0.5">WhatsApp Us</h4>
+        <p class="text-xs text-gray-500 mb-0.5 leading-tight">Instant support and inquiries.</p>
+        <a
+          href="https://wa.me/919876543210"
+          target="_blank"
+          class="inline-flex items-center justify-center gap-1 text-green-700 font-medium text-xs hover:underline"
+        >
+          <i class="ph ph-paper-plane-right text-sm"></i>
+          Start Chat
+        </a>
+      </div>
 
+      <!-- Email Us -->
+      <div class="col-span-2 md:col-span-1 bg-white border rounded-lg shadow p-4 text-center">
+        <div class="text-blue-500 text-xl mb-1">
+          <i class="ph ph-envelope-simple"></i>
+        </div>
+        <h4 class="text-base font-semibold mb-0.5">Email Us</h4>
+        <p class="text-xs text-gray-500 mb-0.5 leading-tight">For general queries, including marketing.</p>
+        <p class="text-blue-600 text-xs font-medium leading-tight">hello@flowbite.com</p>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 
 
 
@@ -1041,30 +1063,62 @@
    
 
     <!-- Minimal Footer -->
-    <footer
-      class="py-6 bg-black/70 flex flex-col lg:flex-row justify-between items-center gap-2 px-6 text-gray-400 text-sm"
-      role="contentinfo"
-    >
-      <div>&copy; 2025 The Wedding Paradise. All Rights Reserved.</div>
-      <div class="flex gap-4 mt-3 lg:mt-0">
+   <footer class="bg-gray-950 text-gray-400 text-sm px-6 py-10 mt-12">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+    <!-- Column 1: Brand Info -->
+    <div>
+      <h3 class="text-white text-lg font-semibold mb-2">The Wedding Paradise</h3>
+      <p class="text-xs leading-relaxed">
+        Creating unforgettable memories with timeless celebrations. We plan, design, and deliver dream weddings.
+      </p>
+      <p class="text-xs mt-4">&copy; 2025 The Wedding Paradise. All rights reserved.</p>
+    </div>
+
+    <!-- Column 2: Navigation Links -->
+    <div class="text-sm">
+      <h4 class="text-white font-medium mb-3">Quick Links</h4>
+      <ul class="space-y-2">
+        <li><a href="/" class="hover:text-white transition">Home</a></li>
+        <li><a href="/about.html" class="hover:text-white transition">About Us</a></li>
+        <li><a href="/services.html" class="hover:text-white transition">Our Services</a></li>
+        <li><a href="/Gallery.html" class="hover:text-white transition">Gallery</a></li>
+        <li><a href="/testimonials" class="hover:text-white transition">Testimonials</a></li>
+        <li><a href="/contact.html" class="hover:text-white transition">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Social & Contact -->
+    <div>
+      <h4 class="text-white font-medium mb-3">Connect With Us</h4>
+      <div class="flex gap-4 mb-4">
         <a
           href="https://instagram.com/"
           target="_blank"
           rel="noopener"
           aria-label="Instagram"
-          class="hover:text-pink-400 transition"
-          ><i class="ph ph-instagram-logo text-xl"></i
-        ></a>
+          class="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-pink-500/80 text-white rounded-full transition-all"
+        >
+          <i class="ph ph-instagram-logo text-lg"></i>
+        </a>
         <a
           href="https://facebook.com/"
           target="_blank"
           rel="noopener"
           aria-label="Facebook"
-          class="hover:text-blue-400 transition"
-          ><i class="ph ph-facebook-logo text-xl"></i
-        ></a>
+          class="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-blue-500/80 text-white rounded-full transition-all"
+        >
+          <i class="ph ph-facebook-logo text-lg"></i>
+        </a>
       </div>
-    </footer>
+      <a href="mailto:hello@weddingparadise.com" class="block text-xs hover:text-white transition">
+        hello@weddingparadise.com
+      </a>
+    </div>
+
+  </div>
+</footer>
+
 
     <!-- Initialize AOS -->
     <script>
