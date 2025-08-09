@@ -40,7 +40,7 @@
     x-data="{ navOpen: false }"
   >
     <!-- Fixed Transparent Navbar -->
-    <nav
+   <nav
        x-data="{ scrolled: false }"
   x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 390 })"
   :class="scrolled ? 'bg-black/90 backdrop-blur shadow text-white' : 'bg-transparent text-white'"
@@ -98,20 +98,20 @@
         <!-- Nav links and socials on desktop -->
         <div class="hidden lg:flex items-center gap-8 ml-auto">
           <a
-            href="/services.html"
+            href="services.html"
             class="hover:text-pink-400 font-medium transition"
             >Services</a
           >
-          <a href="/Gallery.html" class="hover:text-pink-400 font-medium transition"
+          <a href="Gallery.html" class="hover:text-pink-400 font-medium transition"
             >Gallery</a
           >
-          <a href="#blog" class="hover:text-pink-400 font-medium transition"
+          <a href="blog" class="hover:text-pink-400 font-medium transition"
             >Blog</a
           >
-          <a href="/about.html" class="hover:text-pink-400 font-medium transition"
+          <a href="about.html" class="hover:text-pink-400 font-medium transition"
             >About us</a
           >
-          <a href="/contact.html" class="hover:text-pink-400 font-medium transition"
+          <a href="contact.html" class="hover:text-pink-400 font-medium transition"
             >Contact</a
           >
           <!-- Social icons -->
@@ -159,31 +159,31 @@
               <i class="ph ph-x text-3xl"></i>
             </button>
             <a
-              href="#photography"
+              href="services.html"
               @click="navOpen = false"
               class="mb-4 text-lg font-semibold hover:text-pink-400 transition"
-              >Photography</a
+              >Services</a
             >
             <a
-              href="#films"
+              href="films"
               @click="navOpen = false"
               class="mb-4 text-lg font-semibold hover:text-pink-400 transition"
               >Films</a
             >
             <a
-              href="#blog"
+              href="blog"
               @click="navOpen = false"
               class="mb-4 text-lg font-semibold hover:text-pink-400 transition"
               >Blog</a
             >
             <a
-              href="#about"
+              href="about.html"
               @click="navOpen = false"
               class="mb-4 text-lg font-semibold hover:text-pink-400 transition"
               >About us</a
             >
             <a
-              href="#contact"
+              href="contact.html"
               @click="navOpen = false"
               class="mb-8 text-lg font-semibold hover:text-pink-400 transition"
               >Contact</a
@@ -323,12 +323,12 @@
     <div class="text-sm">
       <h4 class="text-white font-medium mb-3">Quick Links</h4>
       <ul class="space-y-2">
-        <li><a href="/" class="hover:text-white transition">Home</a></li>
-        <li><a href="/about.html" class="hover:text-white transition">About Us</a></li>
-        <li><a href="/services.html" class="hover:text-white transition">Our Services</a></li>
-        <li><a href="/Gallery.html" class="hover:text-white transition">Gallery</a></li>
-        <li><a href="/testimonials" class="hover:text-white transition">Testimonials</a></li>
-        <li><a href="/contact.html" class="hover:text-white transition">Contact Us</a></li>
+        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+        <li><a href="services.html" class="hover:text-white transition">Our Services</a></li>
+        <li><a href="Gallery.html" class="hover:text-white transition">Gallery</a></li>
+        <li><a href="testimonials" class="hover:text-white transition">Testimonials</a></li>
+        <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
       </ul>
     </div>
 
