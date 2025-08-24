@@ -40,7 +40,7 @@
     x-data="{ navOpen: false }"
   >
     <!-- Fixed Transparent Navbar -->
-    <nav
+   <nav
        x-data="{ scrolled: false }"
   x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 390 })"
   :class="scrolled ? 'bg-black/90 backdrop-blur shadow text-white' : 'bg-transparent text-white'"
@@ -165,10 +165,10 @@
               >Services</a
             >
             <a
-              href="Gallery.html"
+              href="films"
               @click="navOpen = false"
               class="mb-4 text-lg font-semibold hover:text-pink-400 transition"
-              >Gallery</a
+              >Films</a
             >
             <a
               href="blog"
@@ -205,127 +205,132 @@
 
 
 
-
-<main>
-  
-
-
-<section class="relative bg-gray-50">
-  <!-- Hero -->
-  <div class="relative bg-[url('assets/aboutus/weddingalter.jpg')] bg-cover bg-center h-[60vh] flex items-center justify-center">
-    <div class="absolute inset-0 bg-black/50"></div>
-    <div class="relative text-center text-white px-4">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">About Us</h1>
-      <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
-        Crafting timeless memories through our passion for photography & storytelling.
+<main class="max-w-7xl mx-auto px-6 py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center mb-12">
+      <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">From Our Blog</h2>
+      <p class="mt-4 text-lg leading-relaxed text-slate-600 max-w-xl mx-auto">
+        Catch up on the latest trends, expert tips, and heartwarming stories to inspire your perfect day.
       </p>
     </div>
-  </div>
 
-  <!-- Our Story -->
-<div class="max-w-7xl mx-auto py-20 px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
-  <!-- Left: Text -->
-  <div>
-    <h2 class="text-2xl md:text-4xl font-bold mb-6 text-gray-800">Our Story</h2>
-    <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
-      We started with a simple vision: <span class="font-semibold text-gray-800">to capture emotions that last a lifetime.</span> 
-      What began as a small passion project has now blossomed into a journey of creativity, connection, and storytelling.
-    </p>
-    <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
-      At <span class="text-pink-600 font-semibold">Wedding Paradise</span>, we believe every love story is unique, 
-      and every couple deserves to have their most precious moments preserved in the most authentic way. 
-      Our philosophy is not just about clicking photographs or filming ceremonies—it’s about weaving together memories, 
-      emotions, and details that reflect who you truly are.
-    </p>
-    <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
-      Over the years, we’ve grown from a small team with big dreams into a dedicated family of photographers, 
-      filmmakers, and artists. What drives us is not just the art of visuals, but the ability to make people 
-      <span class="italic">feel</span> something every time they look back at their wedding day. 
-      From the smallest candid smile to the grandest celebrations, we aim to capture it all with elegance, 
-      creativity, and care.
-    </p>
-    <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
-      For us, it’s not just about documenting an event—it’s about telling a story. 
-      <span class="font-semibold">Your story.</span> A story that you, your family, and generations to come will cherish forever.
-    </p>
-    <p class="text-lg md:text-xl font-semibold text-gray-900">
-      Welcome to <span class="text-pink-600 font-bold">Wedding Paradise</span>. Let’s create timeless memories, together.
-    </p>
-  </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16 items-stretch">
 
-  <!-- Right: Image -->
-  <div>
-    <img src="assets/forinsta/6080394272374374617.jpg" alt="Our Story" class="rounded-2xl shadow-lg w-full object-cover">
-  </div>
-</div>
+      <!-- LEFT CARD -->
+      <div class="lg:col-span-2 bg-white rounded-3xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 flex flex-col lg:flex-row h-full">
+        <div class="relative lg:w-1/2 flex-shrink-0">
+          <a href="blog-details.html" class="block h-full">
+            <img src="assets/forinsta/6078142472560689870.jpg" alt="Couple celebrating at their wedding" class="w-full h-56 lg:h-full object-cover transition-transform duration-300 group-hover:scale-105 rounded-l-3xl" />
+          </a>
+          <span class="absolute top-5 left-5 inline-block bg-pink-100 text-pink-700 text-xs font-semibold tracking-wide px-4 py-1.5 rounded-full drop-shadow">
+            Photography
+          </span>
+        </div>
+        <div class="p-8 flex flex-col flex-grow">
+          <h3 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 mb-5 leading-tight tracking-tight line-clamp-3">
+            <a href="blog-details.html" class="hover:text-pink-600 transition-colors">
+              Photography Trends for 2025: Capturing Moments that Last
+            </a>
+          </h3>
+          <p class="text-slate-700 mb-8 leading-relaxed text-base sm:text-lg line-clamp-3 lg:line-clamp-none lg:text-sm">
+            Discover the latest photography trends that will make your big day unforgettable, from candid shots to breathtaking drone footage.
+            <span class="hidden lg:inline lg:text-sm lg:leading-relaxed">
+  <br /><br />
+  In 2025, wedding photography embraces a fresh wave of artistic storytelling and emotional authenticity. Couples are gravitating towards dynamic shots filled with natural moments, creative motion blur, and a blend of traditional and cinematic styles that capture the essence of their love story.
+  Photographers are exploring new techniques such as hybrid photo-video formats, editorial-inspired posing, and dramatic lighting setups that transform wedding albums into timeless art pieces.
+  <br /><br />
+  This year also marks a revival of vintage aesthetics, with film photography and soft-focus techniques blending seamlessly with modern digital editing. Whether through drone perspectives or intimate black-and-white moments, each image is crafted to convey not just the look, but the feeling of the day—raw, real, and unforgettable.
+  <br /><br />
+  Couples and photographers alike are focused on creating albums that tell a story—full of candid laughter, heartfelt glances, and the joy that defines a perfect wedding celebration.
+</span>
 
-
-
-<section class="py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-    
-    <!-- Mission -->
-    <div class="flex flex-col items-center hover:scale-105 transition-all">
-      <div class="relative w-28 h-28 flex items-center justify-center mb-6 rounded-full shadow-md">
-        <div class="absolute inset-0 rounded-full bg-red-100"></div>
-        <!-- Rounded Placeholder Image -->
-        <img src="assets/aboutus/mission.jpg" alt="Mission Icon" class="relative w-16 h-16 rounded-full object-cover">
+          </p>
+          <div class="mb-6 hidden lg:block text-sm text-gray-400 tracking-wide italic">
+            By The Wedding Paradise · Aug 2025 · 3 min read
+          </div>
+          <div class="mt-auto flex items-center justify-start">
+            <a href="blog-details.html" class="inline-flex items-center text-pink-600 font-semibold text-sm uppercase tracking-wide space-x-2 group hover:underline">
+              <span>Read More</span> 
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
-      <h3 class="text-xl font-bold text-gray-800 mb-3">OUR MISSION</h3>
-      <p class="text-gray-500 text-base leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-      </p>
-    </div>
 
-    <!-- Vision -->
-    <div class="flex flex-col items-center  hover:scale-105 transition-all">
-      <div class="relative w-28 h-28 flex items-center justify-center mb-6 rounded-full shadow-md">
-        <div class="absolute inset-0 rounded-full bg-blue-100"></div>
-        <!-- Rounded Placeholder Image -->
-        <img src="assets/aboutus/hands.jpg" alt="Vision Icon" class="relative w-16 h-16 rounded-full object-cover">
+      <!-- RIGHT CARDS -->
+      <div class="flex flex-col gap-10 lg:gap-12 h-full">
+        <!-- CARD 1 -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 flex flex-col h-full">
+          <a href="blog-details.html" class="block rounded-t-3xl overflow-hidden">
+            <img src="assets/forinsta/6080394272374374614.jpg" alt="Wedding table decoration" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
+            <span class="absolute top-4 left-4 inline-block bg-green-100 text-green-700 text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full drop-shadow">
+              Decoration
+            </span>
+          </a>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 line-clamp-2 leading-snug">
+              <a href="blog-details.html" class="hover:text-pink-600 transition-colors">
+                Elegant & Modern Wedding Decoration Ideas
+              </a>
+            </h3>
+            <p class="text-slate-700 text-sm mb-6 line-clamp-3 flex-grow leading-relaxed">
+              From minimalist centerpieces to grand floral installations, explore decoration styles that will elevate your wedding vibe.
+            </p>
+            <div class="mb-3 hidden lg:block text-xs text-gray-400 italic tracking-wide">
+              By Decor Team · Aug 2025 · 4 min read
+            </div>
+            <a href="blog-details.html" class="inline-flex items-center text-pink-600 font-semibold text-sm hover:underline uppercase tracking-wide space-x-1">
+              <span>Read More</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 flex flex-col h-full">
+          <a href="blog-details.html" class="block rounded-t-3xl overflow-hidden">
+            <img src="assets/forinsta/6080394272374374616.jpg" alt="Person planning in a notebook" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
+            <span class="absolute top-4 left-4 inline-block bg-blue-100 text-blue-700 text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full drop-shadow">
+              Planning
+            </span>
+          </a>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 line-clamp-2 leading-snug">
+              <a href="blog-details.html" class="hover:text-pink-600 transition-colors">Top 10 Stress-Free Wedding Planning Tips</a>
+            </h3>
+            <p class="text-slate-700 text-sm mb-6 line-clamp-3 flex-grow leading-relaxed">
+              Plan your big day with confidence using these essential professional tips and tricks for a seamless experience.
+            </p>
+            <div class="mb-3 hidden lg:block text-xs text-gray-400 italic tracking-wide">
+              By Editorial · Aug 2025 · 2 min read
+            </div>
+            <a href="blog-details.html" class="inline-flex items-center text-pink-600 font-semibold text-sm hover:underline uppercase tracking-wide space-x-1">
+              <span>Read More</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
-      <h3 class="text-xl font-bold text-gray-800 mb-3">OUR VISION</h3>
-      <p class="text-gray-500 text-base leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-      </p>
-    </div>
 
-    <!-- Values -->
-    <div class="flex flex-col items-center  hover:scale-105 transition-all">
-      <div class="relative w-28 h-28 flex items-center justify-center mb-6 rounded-full shadow-md">
-        <div class="absolute inset-0 rounded-full bg-green-100"></div>
-        <!-- Rounded Placeholder Image -->
-        <img src="assets/aboutus/values.jpg" alt="Values Icon" class="relative w-16 h-16 rounded-full object-cover">
-      </div>
-      <h3 class="text-xl font-bold text-gray-800 mb-3">OUR VALUES</h3>
-      <p class="text-gray-500 text-base leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-      </p>
     </div>
-
   </div>
-</section>
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </main>
+
+
+
+
+
+
+
+
+
+  
 
 
 
