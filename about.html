@@ -158,6 +158,12 @@
             >
               <i class="ph ph-x text-3xl"></i>
             </button>
+             <a
+              href="index.html"
+              @click="navOpen = false"
+              class="mb-4 text-lg font-semibold hover:text-pink-400 transition"
+              >Home</a
+            >
             <a
               href="services.html"
               @click="navOpen = false"
@@ -212,7 +218,7 @@
 
 <section class="relative bg-gray-50">
   <!-- Hero -->
-  <div class="relative bg-[url('assets/aboutus/weddingalter.jpg')] bg-cover bg-center h-[60vh] flex items-center justify-center">
+  <div class="relative bg-[url('assets/aboutus/weddingalter.jpg')] bg-cover bg-center h-[60vh] flex items-center justify-center ">
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative text-center text-white px-4">
       <h1 class="text-4xl md:text-6xl font-bold mb-4">About Us</h1>
@@ -260,49 +266,53 @@
 </div>
 
 
-
-<section class="py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-    
-    <!-- Mission -->
-    <div class="flex flex-col items-center hover:scale-105 transition-all">
-      <div class="relative w-28 h-28 flex items-center justify-center mb-6 rounded-full shadow-md">
-        <div class="absolute inset-0 rounded-full bg-red-100"></div>
-        <!-- Rounded Placeholder Image -->
-        <img src="assets/aboutus/mission.jpg" alt="Mission Icon" class="relative w-16 h-16 rounded-full object-cover">
-      </div>
-      <h3 class="text-xl font-bold text-gray-800 mb-3">OUR MISSION</h3>
-      <p class="text-gray-500 text-base leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-playfair-display font-bold text-gray-900 mb-4">
+        Our Core Principles
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        At The Wedding Paradise, every service we offer is guided by our unwavering commitment to our mission, vision, and values.
       </p>
     </div>
 
-    <!-- Vision -->
-    <div class="flex flex-col items-center  hover:scale-105 transition-all">
-      <div class="relative w-28 h-28 flex items-center justify-center mb-6 rounded-full shadow-md">
-        <div class="absolute inset-0 rounded-full bg-blue-100"></div>
-        <!-- Rounded Placeholder Image -->
-        <img src="assets/aboutus/hands.jpg" alt="Vision Icon" class="relative w-16 h-16 rounded-full object-cover">
-      </div>
-      <h3 class="text-xl font-bold text-gray-800 mb-3">OUR VISION</h3>
-      <p class="text-gray-500 text-base leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-      </p>
-    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 text-center">
 
-    <!-- Values -->
-    <div class="flex flex-col items-center  hover:scale-105 transition-all">
-      <div class="relative w-28 h-28 flex items-center justify-center mb-6 rounded-full shadow-md">
-        <div class="absolute inset-0 rounded-full bg-green-100"></div>
-        <!-- Rounded Placeholder Image -->
-        <img src="assets/aboutus/values.jpg" alt="Values Icon" class="relative w-16 h-16 rounded-full object-cover">
+      <div class="flex flex-col items-center bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:scale-105 transition-all duration-300">
+        <div class="relative w-24 h-24 mb-6">
+          <img src="assets/aboutus/mission.jpg" alt="Our Mission" class="w-full h-full rounded-full object-cover shadow-inner">
+          <div class="absolute inset-0 rounded-full ring-4 ring-offset-2 ring-red-200"></div>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-3">Our Mission</h3>
+        <p class="text-gray-500 text-base leading-relaxed">
+          To capture the unique essence of every couple's love story through authentic and artistic photography, creating timeless visual legacies that will be cherished for generations.
+        </p>
       </div>
-      <h3 class="text-xl font-bold text-gray-800 mb-3">OUR VALUES</h3>
-      <p class="text-gray-500 text-base leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-      </p>
-    </div>
 
+      <div class="flex flex-col items-center bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:scale-105 transition-all duration-300">
+        <div class="relative w-24 h-24 mb-6">
+          <img src="assets/aboutus/hands.jpg" alt="Our Vision" class="w-full h-full rounded-full object-cover shadow-inner">
+          <div class="absolute inset-0 rounded-full ring-4 ring-offset-2 ring-blue-200"></div>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-3">Our Vision</h3>
+        <p class="text-gray-500 text-base leading-relaxed">
+          To become the leading name in wedding photography, celebrated for our creative excellence, seamless client experience, and a portfolio that reflects the full spectrum of human emotion.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:scale-105 transition-all duration-300">
+        <div class="relative w-24 h-24 mb-6">
+          <img src="assets/aboutus/values.jpg" alt="Our Values" class="w-full h-full rounded-full object-cover shadow-inner">
+          <div class="absolute inset-0 rounded-full ring-4 ring-offset-2 ring-green-200"></div>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-3">Our Values</h3>
+        <p class="text-gray-500 text-base leading-relaxed">
+          We believe in authenticity, creativity, and integrity. We are committed to an eco-conscious approach and a collaborative process that puts our couples at the heart of everything we do.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
