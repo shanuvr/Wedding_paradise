@@ -1,19 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rhapsody of Love – Gallery</title>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<!DOCTYPE html>
+<html lang="en" class="dark" style="scroll-behavior:smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Wedding Paradaise</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.8/cdn.min.js"></script>
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-  <style>
-    /* ✅ Clean white aesthetic */
-    body {
+    <!-- Google Fonts: Montserrat -->
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body,
+  html {
+    overflow-x: hidden;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  main {
+    flex: 1;
+  }
+   body {
       font-family: 'Poppins', sans-serif;
       background-color: #ffffff;
       color: #1a1a1a;
@@ -42,12 +66,181 @@
       max-height: 80vh;
       object-fit: contain;
     }
-  </style>
-</head>
 
-<body class="min-h-screen">
+    </style>
+  </head>
+  <body
+    class="min-h-screen flex flex-col scroll-smooth bg-[#f5f5f5] text-white overflow-x-hidden transition-all duration-300"
+    x-data="{ navOpen: false }"
+  >
+    <!-- Fixed Transparent Navbar -->
+   <nav
+       x-data="{ scrolled: false }"
+  x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 390 })"
+  :class="scrolled ? 'bg-black/90 backdrop-blur shadow text-white' : 'bg-transparent text-white'"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+  role="navigation"
+  aria-label="Primary Navigation"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+        <!-- Hamburger Menu button - visible only on mobile -->
+        <button
+          @click="navOpen = !navOpen"
+          aria-label="Toggle menu"
+          class="lg:hidden text-white hover:text-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-600 rounded z-50 relative"
+          type="button"
+        >
+          <i class="ph ph-list text-3xl"></i>
+        </button>
 
-  <!-- Header -->
+        <!-- Logo -->
+        <a
+          href="#"
+          class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:translate-x-0 lg:left-0"
+          aria-label="The Wedding Paradaise "
+        >
+          <!-- Example logo SVG, replace with your own -->
+          <!-- <svg
+            class="w-10 h-10 fill-white"
+            viewBox="0 0 48 48"
+            role="img"
+            aria-labelledby="logoTitle"
+          >
+            <title id="logoTitle">The Wedding Paradise</title>
+            <circle
+              cx="24"
+              cy="24"
+              r="22"
+              stroke="white"
+              stroke-width="2"
+              fill="none"
+            />
+            <text
+              x="50%"
+              y="58%"
+              text-anchor="middle"
+              font-family="Montserrat"
+              font-weight="700"
+              font-size="20"
+              fill="white"
+            >
+              RL
+            </text>
+          </svg> -->
+        </a>
+
+        <!-- Nav links and socials on desktop -->
+        <div class="hidden lg:flex items-center gap-8 ml-auto">
+          <a
+            href="services.html"
+            class="hover:text-pink-400 font-medium transition"
+            >Services</a
+          >
+          <a href="Gallery.html" class="hover:text-pink-400 font-medium transition"
+            >Gallery</a
+          >
+          <a href="blogs.html" class="hover:text-pink-400 font-medium transition"
+            >Blog</a
+          >
+          <a href="about.html" class="hover:text-pink-400 font-medium transition"
+            >About us</a
+          >
+          <a href="contact.html" class="hover:text-pink-400 font-medium transition"
+            >Contact</a
+          >
+          <!-- Social icons -->
+          <a
+            href="https://instagram.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            class="hover:text-pink-500 transition"
+          >
+            <i class="ph ph-instagram-logo text-2xl"></i>
+          </a>
+          <a
+            href="https://facebook.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+            class="hover:text-blue-400 transition"
+          >
+            <i class="ph ph-facebook-logo text-2xl"></i>
+          </a>
+        </div>
+
+        <!-- Mobile slide-in menu -->
+        <div
+          x-show="navOpen"
+          @keydown.escape.window="navOpen = false"
+          x-transition:enter="transition-all ease-out duration-300"
+          x-transition:enter-start="-translate-x-full opacity-0"
+          x-transition:enter-end="translate-x-0 opacity-100"
+          x-transition:leave="transition-all ease-in duration-200"
+          x-transition:leave-start="translate-x-0 opacity-100"
+          x-transition:leave-end="-translate-x-full opacity-0"
+          class="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm lg:hidden flex"
+          style="display: none;"
+        >
+          <nav
+            class="bg-[#1f2128] w-4/5 max-w-xs min-h-screen p-6 flex flex-col shadow-xl text-white"
+          >
+            <button
+              @click="navOpen = false"
+              aria-label="Close menu"
+              class="self-end mb-4 hover:text-pink-400 transition"
+            >
+              <i class="ph ph-x text-3xl"></i>
+            </button>
+            <a
+              href="services.html"
+              @click="navOpen = false"
+              class="mb-4 text-lg font-semibold hover:text-pink-400 transition"
+              >Services</a
+            >
+            <a
+              href="Gallery.html"
+              @click="navOpen = false"
+              class="mb-4 text-lg font-semibold hover:text-pink-400 transition"
+              >Gallery</a
+            >
+            <a
+              href="blogs.html"
+              @click="navOpen = false"
+              class="mb-4 text-lg font-semibold hover:text-pink-400 transition"
+              >Blog</a
+            >
+            <a
+              href="about.html"
+              @click="navOpen = false"
+              class="mb-4 text-lg font-semibold hover:text-pink-400 transition"
+              >About us</a
+            >
+            <a
+              href="contact.html"
+              @click="navOpen = false"
+              class="mb-8 text-lg font-semibold hover:text-pink-400 transition"
+              >Contact</a
+            >
+           
+          </nav>
+          <!-- Click outside closes menu -->
+          <div
+            class="flex-1"
+            @click="navOpen = false"
+            tabindex="-1"
+            aria-hidden="true"
+          ></div>
+        </div>
+      </div>
+    </nav>
+
+  
+
+
+
+<main class="max-w-7xl mx-auto px-6 py-16">
+     <!-- Header -->
   <header class="relative text-center pt-20 pb-16 sm:pb-24 bg-white overflow-hidden">
     <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-4 
                bg-gradient-to-r from-gray-800 via-pink-500 to-gray-800 
@@ -90,23 +283,184 @@
       </div>
     </div>
   </div>
+ 
+</main>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Floating Action Button -->
+<div x-data="{ open: false }"
+     class="fixed bottom-6 right-4 z-50">
+
+  <!-- Action Icons -->
+  <div x-show="open" x-transition
+       class="flex flex-col items-center gap-3 mb-3"
+       @click.outside="open = false">
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919999999999" target="_blank"
+       class="bg-green-500 hover:bg-green-600 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition-all duration-200">
+      <i class="ph ph-whatsapp-logo text-xl"></i>
+    </a>
+
+    <!-- Call -->
+    <a href="tel:+919999999999"
+       class="bg-blue-500 hover:bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition-all duration-200">
+      <i class="ph ph-phone-call text-xl"></i>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:your@email.com"
+       class="bg-red-500 hover:bg-red-600 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition-all duration-200">
+      <i class="ph ph-envelope-simple text-xl"></i>
+    </a>
+  </div>
+
+  <!-- Toggle FAB Button -->
+  <button @click="open = !open"
+          class="bg-black hover:bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-xl transition-all duration-300 relative">
+
+    <!-- Phone Icon -->
+    <i x-show="!open"
+       x-transition:enter="transition transform ease-out duration-200"
+       x-transition:enter-start="opacity-0 scale-75"
+       x-transition:enter-end="opacity-100 scale-100"
+       x-transition:leave="transition transform ease-in duration-150"
+       x-transition:leave-start="opacity-100 scale-100"
+       x-transition:leave-end="opacity-0 scale-75"
+       class="ph ph-phone text-2xl absolute"></i>
+
+    <!-- Close Icon -->
+    <i x-show="open"
+       x-transition:enter="transition transform ease-out duration-200"
+       x-transition:enter-start="opacity-0 scale-75"
+       x-transition:enter-end="opacity-100 scale-100"
+       x-transition:leave="transition transform ease-in duration-150"
+       x-transition:leave-start="opacity-100 scale-100"
+       x-transition:leave-end="opacity-0 scale-75"
+       class="ph ph-x text-2xl absolute"></i>
+  </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+    <!-- Minimal Footer -->
+     <footer class="bg-gray-950 text-gray-400 text-sm px-6 py-10 mt-12">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+    <!-- Column 1: Brand Info -->
+    <div>
+      <h3 class="text-white text-lg font-semibold mb-2">The Wedding Paradise</h3>
+      <p class="text-xs leading-relaxed">
+        Creating unforgettable memories with timeless celebrations. We plan, design, and deliver dream weddings.
+      </p>
+      <p class="text-xs mt-4">&copy; 2025 The Wedding Paradise. All rights reserved.</p>
+    </div>
+
+    <!-- Column 2: Navigation Links -->
+    <div class="text-sm">
+      <h4 class="text-white font-medium mb-3">Quick Links</h4>
+      <ul class="space-y-2">
+        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+        <li><a href="services.html" class="hover:text-white transition">Our Services</a></li>
+        <li><a href="Gallery.html" class="hover:text-white transition">Gallery</a></li>
+        <li><a href="testimonials" class="hover:text-white transition">Testimonials</a></li>
+        <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Social & Contact -->
+    <div>
+      <h4 class="text-white font-medium mb-3">Connect With Us</h4>
+      <div class="flex gap-4 mb-4">
+        <a
+          href="https://instagram.com/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+          class="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-pink-500/80 text-white rounded-full transition-all"
+        >
+          <i class="ph ph-instagram-logo text-lg"></i>
+        </a>
+        <a
+          href="https://facebook.com/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Facebook"
+          class="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-blue-500/80 text-white rounded-full transition-all"
+        >
+          <i class="ph ph-facebook-logo text-lg"></i>
+        </a>
+      </div>
+      <a href="mailto:hello@weddingparadise.com" class="block text-xs hover:text-white transition">
+        hello@weddingparadise.com
+      </a>
+    </div>
+
+  </div>
+</footer>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <script>
     // -------------------------------
     // 1. Image Data Array
     // -------------------------------
     const images = [
-      { id: 1, url: 'https://images.unsplash.com/photo-1604514628550-37477afdf4e3?auto=format&fit=crop&w=1200&q=80', alt: 'Couple Portrait', heightClass: 'h-96' },
-      { id: 2, url: 'https://images.unsplash.com/photo-1529634893914-2a7d04bde586?auto=format&fit=crop&w=1200&q=80', alt: 'Ceremony Shot', heightClass: 'h-72' },
-      { id: 3, url: 'https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=1200&q=80', alt: 'Detail Shot', heightClass: 'h-[28rem]' },
-      { id: 4, url: 'https://images.unsplash.com/photo-1602511802745-9fe1d8fd35c0?auto=format&fit=crop&w=1200&q=80', alt: 'Reception Venue', heightClass: 'h-80' },
-      { id: 5, url: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80', alt: 'First Dance', heightClass: 'h-96' },
-      { id: 6, url: 'https://images.unsplash.com/photo-1508973374600-733b07f3d734?auto=format&fit=crop&w=1200&q=80', alt: 'Candid Moment', heightClass: 'h-72' },
-      { id: 7, url: 'https://images.unsplash.com/photo-1601924738208-6e9f34f7ab98?auto=format&fit=crop&w=1200&q=80', alt: 'Sunset Photo', heightClass: 'h-[28rem]' },
-      { id: 8, url: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80', alt: 'Rings Detail', heightClass: 'h-80' },
+      { id: 1, url: '/gallery1/Anjaja&sreeraj/anjana1.jpg', alt: 'Couple Portrait', heightClass: 'h-76' },
+      { id: 2, url: '/gallery1/Anjaja&sreeraj/anjana2.jpg', alt: 'Ceremony Shot', heightClass: 'h-76' },
+      { id: 3, url: '/gallery1/Anjaja&sreeraj/anjana3.jpg', alt: 'Detail Shot', heightClass: 'h-76' },
+      { id: 4, url: '/gallery1/Anjaja&sreeraj/anjana4.jpg', alt: 'Reception Venue', heightClass: 'h-76' },
+      { id: 5, url: '/gallery1/Anjaja&sreeraj/anjana5.jpg', alt: 'First Dance', heightClass: 'h-76' },
+   
     ];
 
     const galleryGrid = document.getElementById('gallery-grid');
@@ -174,5 +528,11 @@
 
     document.addEventListener('DOMContentLoaded', renderGallery);
   </script>
-</body>
+
+    <!-- Initialize AOS -->
+    <script>
+      
+      AOS.init({ once: true, duration: 800 });
+    </script>
+  </body>
 </html>
